@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        @import url(https://colorhunt.co/palette/191825865dffe384ffffa3fd);
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+        body {
+            background-color: #11101b;
+            box-sizing: border-box;
+            height: fit-content;
+        }
+
+        header {
+            width: 100%;
+            height: 80px;
+            background: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 100px;
+            /* position: absolute; */
+            /* top: 0; */
+        }
+
+        .hamburger {
+            display: hidden;
+        }
+
+        .navbar ul {
+            display: flex;
+        }
+
+        .navbar ul li {
+            list-style: none;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            display: block;
+            color: #fefefe;
+            font-size: 15px;
+            padding: 10px 25px;
+            border-radius: 50px;
+            transition: 0.2s;
+            margin: 0 5px;
+        }
+
+        .navbar ul li a:hover {
+            color: rgb(24, 24, 24);
+            background: rgb(63, 203, 235);
+        }
+
+        .navbar ul li a.active {
+            color: rgb(24, 24, 24);
+            background: rgb(63, 203, 235);
+        }
+
+        @media only screen and (max-width: 1320px) {
+            header {
+                padding: 0 50px;
+            }
+        }
+
+        @media only screen and (max-width: 1100px) {
+            header {
+                padding: 0 30px;
+            }
+        }
+
+        @media only screen and (max-width: 900px) {
+            .hamburger {
+                display: block;
+                cursor: pointer;
+            }
+
+            .hamburger .line {
+                width: 30px;
+                height: 3px;
+                background: #fefefe;
+                margin: 6px 0;
+            }
+
+            .navbar {
+                height: 0;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                width: 100vw;
+                background: #11101b;
+                transition: 0.2s;
+                overflow: hidden;
+            }
+
+            .navbar.active {
+                height: 300px;
+            }
+
+            .navbar ul {
+                display: block;
+                width: fit-content;
+                margin: 80px auto 0 auto;
+                text-align: center;
+                transition: 0.5s;
+                opacity: 0;
+            }
+
+            .navbar ul li a {
+                margin-bottom: 12px;
+            }
+
+            .navbar.active ul {
+                opacity: 1;
+
+            }
+        }
+
+
+
+        .heading {
+            box-sizing: border-box;
+            height: 10vh;
+            /* background-color: green; */
+            color:  rgb(63, 203, 235);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content{
+            box-sizing: border-box;
+            color: #FBFBFD;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 12px 0px;
+            padding: 2px 10px;
+            gap: 4px;
+            width: 100%;
+            /* background-color: green; */
+        }
+
+
+h2{
+    color:  rgb(63, 203, 235);
+}
+
+
+label{
+    color:  rgb(63, 203, 235);
+    font-style: italic;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+
+
+
+
+        footer {
+            width: 100%;
+            background-color: #414141;
+            padding: 0 5px;
+            box-sizing: border-box;
+            padding-top: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 7vh;
+            position: relative;
+            bottom: 0;
+            box-sizing: border-box;
+        }
+
+        #footerlist li {
+            color: white;
+            padding: 0px 5px;
+            list-style: none;
+            /* background-color: white; */
+            box-sizing: border-box;
+        }
+
+        #footerlist li a {
+            text-decoration: none;
+
+        }
+
+        #footerlist {
+            display: flex;
+
+        }
+
+        #copyright {
+            color: rgb(63, 203, 235);
+        }
+        .skil{
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            height: fit-content;
+            padding: 0px 5px;
+            /* width: 100%; */
+        }
+        .project{
+            color: white;
+            box-sizing: border-box;
+            margin: 12px 2px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            padding: 0px 10px;
+            height: fit-content;
+        }
+        section{
+            height: auto;
+        }
+        .award{
+            color: white;
+            box-sizing: border-box;
+            margin: 12px 2px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            padding: 0px 10px;
+            height: fit-content;
+        }
+        p{
+            font-family: monospace;
+            font-style: italic;
+            color: cornsilk;
+        }
+        #skilling{
+            margin: 0 3px;
+            padding: 0px 4px;
+
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo"><img src="./logo r1.png" alt="" width="60px"></div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html" class="active">About</a></li>
+                <li><a href="">Services</a></li>
+                <li>
+                    <a href="./contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function () {
+            navBar = document.querySelector(".navbar");
+            navBar.classList.toggle("active");
+        }
+    </script>
+
+
+    <div class="heading">
+        <h1>About Me</h1>
+    </div>
+    <div class="content">
+        <h2>Summary</h2><br>
+        <p>A highly organized and proactive professional with exceptional communication and interpersonal skills.Proven ability to work as part of a team and manage multiple tasks simultaneously. Utilizing myknowledge and training to successfully handle complex tasks and achieve desired results. Seeking an opportunity to effectively contribute to the success of the organization</p>
+    </div>
+    <br>
+    <section><div class="skil">
+        <h2>Skills</h2>
+        <br>
+        <p id="skilling">C,Java,Python,MySQL,HTML,CSS,JavaScript.</p>
+    </div></section>
+    <section><div class="project">
+        <h2>Projects</h2>
+        <br>
+        <p><label>
+        => My personal portfolio Feb 2023 - Mar 2023
+        </label>
+            <br>
+            • Developed highly functional portfolio website to showcase programming skills
+            <br>
+            • Built website with HTML, CSS and JavaScript to enhance visual appeal
+            <br>
+            • Optimized website for mobile devices to enhance accessibility
+            <br>
+            • Utilized Git for version control to ensure timely updates
+            <br>
+            • Ensured website functionality across multiple browsers
+            <br>
+            • Tested for bugs and deployed website on several platforms
+            <br>
+            <br>
+            <label>
+            => Image Slider Mar 2023 - Mar 2023 </label>
+            <br>
+            Image sliding animation using CSS
+            <br>
+            <br>
+            <label>
+            => Sharingan animation Mar 2023 - Mar 2023
+            </label>
+            <br>
+            My project centered around creating interactive CSS animations to enhance user experience whenthey land on a web page. I researched existing CSS animations, studied how they were used on professional websites
+            and learned how to create my own.</p>
+    </div></section>
+    <section><div class="award">
+        <h2>Achievements and Awards</h2>
+        <br>
+        <p> <label>
+            Basics in Java Script Mar 2023 </label>
+            <br>
+            Demonstrated Expertise: Successfully obtained a Certificate in JavaScript Basics from OpenWeaver,
+            showcasing knowledge of the fundamentals of the programming language.
+            <br>
+            <br> <label>
+            HTML -Introduction Feb 2023 </label>
+            <br>
+            Received certification in HTML Introduction by Career Ninja, increasing HTML proficiency and
+            boosting understanding of web development concepts by 20%. Developed skills in creating and
+            maintaining websites, and successfully implemented HTML coding into 3 projects.
+            <br>
+            <br>
+            <label>
+            AI for Everyone Jan 2022 </label>
+            <br>
+            Led successful implementation of AI technology, achieving prime certificate in AI for Everyone byDigital
+            Defined. Effectively utilized skills in AI to enhance existing processes, resulting in improved productivity
+            and efficiency.
+            <br>
+            <br>
+            <label>
+            Basics in Python Jul 2020 </label>
+            <br>
+            Completed a certification course in Python from the University of Michigan through Coursera,
+            demonstrating proficiency in the fundamentals of Python programming</p>
+    </div></section>
+<br>
+    <footer>
+        <p id="copyright">Copy &copy; 2023 Ramrac</p>
+        <ul id="footerlist">
+            <li><a href="https://www.facebook.com/ramrac143/"><img src="./facebook.png" alt="" width="35px"></a></li>
+            <li><a href="https://www.instagram.com/livelikearoyal/"><img src="./instagram.png" alt="" width="35px"></a>
+            </li>
+            <li><a href="https://www.linkedin.com/in/arabandi-rambabu-b3aabb1b5"><img src="./linkedin.png" alt=""
+                        width="35px"></a></li>
+            <li><a href="https://github.com/rambabu-143"><img src="./github.png" alt="" width="35px"></a></li>
+        </ul>
+
+    </footer>
+
+</body>
+
+</html>
